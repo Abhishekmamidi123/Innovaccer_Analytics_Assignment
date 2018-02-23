@@ -1,13 +1,15 @@
 import Levenshtein
 
-name_1 = 'Vladimir Frometa Garo'
-name_2 = 'Vladimir A Frometa G'
 name_1 = 'Michael John Pfeng'
 name_2 = 'M. John Penn'
 name_1 = 'RON CARLSON JR'
-name_2 = 'ROY CARLSON JR'
+name_2 = 'R CARLSON JR'
 name_1 = 'Barack Obama'
-name_2 = 'B. Obama'
+name_2 = 'B. Bbama G'
+name_1 = 'JOHN MICHAELSON'
+name_2 = 'JOHN LIND JR'
+name_1 = 'Vladimir Frometa G'
+name_2 = 'Vladimir A Frometa'
 print name_1
 print name_2
 
@@ -45,4 +47,7 @@ for i in range(len(name_1_tokens)):
         	        		print 'False'
 print "\n"
 print count_1, count_2
-print 'True'
+if count_1 == 0 or min(len(name_1_tokens), len(name_2_tokens)) > count_1 + count_2:
+	print 'False'
+else:
+	print 'True'
