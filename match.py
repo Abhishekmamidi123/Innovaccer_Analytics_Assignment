@@ -17,8 +17,8 @@ name_1 = 'ROY CARLSON JR'
 # print name_2
 
 
-def read_data(): 
-	open_file = open('Sample_Dataset.csv', 'rU')
+def read_data(filename): 
+	open_file = open(filename, 'rU')
 	reader = csv.reader(open_file)
 	global data
 	data = []
@@ -88,11 +88,10 @@ def cluster_names():
 			print '\n'
 	print count
 
-read_data()
+filename = 'Sample_Dataset.csv'
+read_data(filename)
 cluster_names()
 
 name_2 = 'ADDISON J HANNA'
 name_1 = 'ADDISON JOHN HANNA'
 print is_name_matched(name_1, name_2)
-# print name_1
-# print name_2
