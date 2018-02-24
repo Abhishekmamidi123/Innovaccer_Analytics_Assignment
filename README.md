@@ -1,6 +1,6 @@
 # Innovaccer_Analytics_Assignment
 
-## How to run:
+### How to run:
 `>> import Analytics`
 
 `>> filename = 'Sample_Dataset.csv'`
@@ -9,7 +9,7 @@
 
 `>> cluster_names()  # Clusters all the names that are provided in the dataset.`
 
-If you want to find whether two names are matching or not...
+#### If you want to find whether two names are matching or not...
 
 `>> name_1 = 'Vladimir Frometa'`
 
