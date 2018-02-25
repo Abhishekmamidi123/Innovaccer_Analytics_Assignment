@@ -54,11 +54,14 @@ def is_name_matched(name_1, name_2):
 def cluster_names():
 	count = 0
 	length = len(data)
-	# length = 20
+	global Clusters
+	Clusters = []
 	info = np.zeros(length)
 	for i in range(0, length):
 		if info[i] == 0:
-			print data[i]
+			cluster = []
+			cluster.append(data[i])
+			# print data[i]
 			for j in range(i+1, length):
 				if info[j] == 0:
 					check_1 = is_name_matched(data[i], data[j])
@@ -66,14 +69,24 @@ def cluster_names():
 					check = check_1 or check_2
 					# print check
 					if check_1 == 'True' or check_2 == 'True':
-						print data[j]
+						cluster.append(data[j])
+						# print data[j]
 						info[j] = 1
 			count+=1
 			info[i] = 1
 #			print info
-			print '\n'
-	print count
+			# print '\n'
+			Clusters.append(cluster)
+	# print count
 
 filename = 'Sample_Dataset.csv'
 read_data(filename)
 cluster_names()
+# print Clusters
+count = 1
+for cluster in Clusters:
+    print 'Cluster ' + str(count) + ':'
+    for name in cluster:
+        print name
+    print '\n'
+    count+=1
