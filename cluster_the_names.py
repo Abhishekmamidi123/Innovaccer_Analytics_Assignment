@@ -74,19 +74,16 @@ def cluster_names():
 						info[j] = 1
 			count+=1
 			info[i] = 1
-#			print info
-			# print '\n'
 			Clusters.append(cluster)
-	# print count
+	count = 1
+	for cluster in Clusters:
+		print 'Cluster ' + str(count) + ':'
+		for name in cluster:
+			print name
+		print '\n'
+		count+=1
 
 filename = 'Sample_Dataset.csv'
 read_data(filename)
 cluster_names()
 # print Clusters
-count = 1
-for cluster in Clusters:
-    print 'Cluster ' + str(count) + ':'
-    for name in cluster:
-        print name
-    print '\n'
-    count+=1
