@@ -3,20 +3,6 @@ import numpy as np
 import Levenshtein
 from random import shuffle
 
-name_1 = 'Michael John Pfeng'
-name_2 = 'M. John Penn'
-name_1 = 'Barack Obama'
-name_2 = 'B. Bbama G'
-name_1 = 'JOHN MICHAELSON'
-name_2 = 'JOHN LIND JR'
-name_1 = 'Vladimir Frometa G'
-name_2 = 'Vladimir A Frometa'
-name_2 = 'RON CARLSON JR'
-name_1 = 'ROY CARLSON JR'
-# print name_1
-# print name_2
-
-
 def read_data(filename): 
 	open_file = open(filename, 'rU')
 	reader = csv.reader(open_file)
@@ -91,7 +77,3 @@ def cluster_names():
 filename = 'Sample_Dataset.csv'
 read_data(filename)
 cluster_names()
-
-name_2 = 'ADDISON J HANNA'
-name_1 = 'ADDISON JOHN HANNA'
-print is_name_matched(name_1, name_2)
